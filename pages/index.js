@@ -11,7 +11,7 @@ const Home = ({ users }) => {
       </Head>
       <Slider sliderProps={users} />
 
-      <h1>Welcome to Users</h1>
+      <h1 style={{textAlign: 'center'}}>Welcome to Users</h1>
     </div>
   );
 };

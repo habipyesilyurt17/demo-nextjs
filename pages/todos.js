@@ -9,7 +9,7 @@ const Todos = ({ todos }) => {
         <title>Todos</title>
       </Head>
       <Slider sliderProps={todos} />
-      <h1>Welcome to Todos</h1>
+      <h1 style={{textAlign: 'center'}}>Welcome to Todos</h1>
     </div>
   );
 };
