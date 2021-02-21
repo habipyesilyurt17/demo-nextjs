@@ -8,7 +8,7 @@ const Slider = ({ sliderProps }) => {
     setIndex(selectedIndex);
   };
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
+    <Carousel activeIndex={index} onSelect={handleSelect} style={{width: '500px', height: '500px'}}>
       {sliderProps.map((item) => (
         <Carousel.Item key={item.id}>
           <img src={item.image} alt={item.name} />
