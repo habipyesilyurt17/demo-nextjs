@@ -1,6 +1,6 @@
 import Head from "next/head";
 import "bootstrap/dist/css/bootstrap.min.css";
-import unfetch from 'isomorphic-unfetch'
+import Slider from "../components/Slider";
 
 const Home = ({ users }) => {
   return (
@@ -9,6 +9,7 @@ const Home = ({ users }) => {
         <title>Users</title>
         <meta name="keywords" content="web development, programing" />
       </Head>
+      <Slider sliderProps={users} />
 
       <h1>Welcome to Users</h1>
     </div>
@@ -16,7 +17,7 @@ const Home = ({ users }) => {
 };
 
 export async function getStaticProps() {
-  const data = await unfetch(
+  const data = await fetch(
     "https://602159aaae8f8700177de3f1.mockapi.io/api/users"
   );
   const users = await data.json();

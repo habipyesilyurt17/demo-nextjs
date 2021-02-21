@@ -11,16 +11,7 @@ const Layout = ({ children }) => {
       </Head>
       <Nav />
       <div className={styles.container}>
-        <main className={styles.main}>
-          <Slider
-            sliderProps={
-              children.type.name === "Home"
-                ? children.props.users
-                : children.props.todos
-            }
-          />
-          {children}
-        </main>
+        <main className={styles.main}>{children}</main>
       </div>
     </>
   );
