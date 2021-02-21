@@ -15,7 +15,9 @@ const Home = ({ users }) => {
 };
 
 export async function getStaticProps() {
-  const data = await fetch("https://602159aaae8f8700177de3f1.mockapi.io/api/users");
+  const data = await fetch(
+    "https://602159aaae8f8700177de3f1.mockapi.io/api/users"
+  );
   const users = await data.json();
   return {
     props: {
