@@ -3,12 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Slider from "../components/Slider";
 
 const Todos = ({ todos }) => {
+  const {results = []} = todos
   return (
     <div>
       <Head>
         <title>Todos</title>
       </Head>
-      <Slider sliderProps={todos} />
+      <Slider sliderProps={results} />
       <h1 style={{textAlign: 'center'}}>Welcome to Todos</h1>
     </div>
   );

@@ -3,13 +3,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Slider from "../components/Slider";
 
 const Home = ({ users }) => {
+  const {results = []} = users
+
   return (
     <div>
       <Head>
         <title>Users</title>
         <meta name="keywords" content="web development, programing" />
       </Head>
-      <Slider sliderProps={users} />
+      <Slider sliderProps={results} />
 
       <h1 style={{textAlign: 'center'}}>Welcome to Users</h1>
     </div>
